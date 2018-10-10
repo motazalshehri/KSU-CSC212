@@ -100,7 +100,7 @@ public class LinkedList<T> implements List<T> {
          */
         while (current != null) {
 
-            if (cnd.test(this.retrieve()) == false)//or use ( ! )
+            if (cnd.test(current.data) == false)//or use ( ! )
             {
                 this.remove();//remove the element
             }
@@ -133,7 +133,7 @@ public class LinkedList<T> implements List<T> {
             /*
               call the method process on the element
              */
-            processor.process(retrieve());//
+            processor.process(current.data);//
             findNext();//move the current pointer to the next element
 
         }
