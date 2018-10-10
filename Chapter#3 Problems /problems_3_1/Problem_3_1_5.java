@@ -2,13 +2,16 @@
  * Written By NAIF ALSHEHRI
  * https://VisionAcademy.online
  */
-package list;
+package problems_3_1;
+
+import adt.LinkedList;
+import adt.List;
 
 /**
  *
  * @author IT676
  */
-public class Problem_3_5 {
+public class Problem_3_1_5 {
 
     public static void main(String[] args) {
         //List<Integer> list = new ArrayList<Integer>(10);
@@ -20,8 +23,7 @@ public class Problem_3_5 {
         list.insert(3);
         list.insert(4);
         list.insert(2);
-        list.insert(3);
-        list.insert(3);
+        list.insert(5);
         list.insert(3);
 
         System.out.println("The Most Frequent Element is : " + mfe(list));

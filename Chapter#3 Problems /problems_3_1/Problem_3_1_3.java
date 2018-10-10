@@ -2,13 +2,17 @@
  * Written By NAIF ALSHEHRI
  * https://VisionAcademy.online
  */
-package list;
+package problems_3_1;
+
+import adt.LinkedList;
+import adt.List;
+import helpers.Helper;
 
 /**
  *
  * @author IT676
  */
-public class Problem_3_3 {
+public class Problem_3_1_3 {
 
     public static void main(String[] args) {
 
@@ -24,16 +28,16 @@ public class Problem_3_3 {
         list1.insert("M");
         list1.insert("D");
 
-        printList(list1);
+        Helper.printList(list1);
         list2.insert("R");
         list2.insert("M");
         list2.insert("W");
         list2.insert("F");
-        printList(list2);
+        Helper.printList(list2);
 
         System.out.println("******************************");
         commonE(list1, list2, commonList);
-        printList(commonList);
+        Helper.printList(commonList);
     }
 
     public static <T> void commonE(List<T> l1, List<T> l2, List<T> cl) {
@@ -79,20 +83,4 @@ public class Problem_3_3 {
 
     }
 
-    /*
-    This method for demonstation only to test the other methods
-     */
-    private static <T> void printList(List<T> list) {
-
-        list.findFirst();
-
-        while (!list.last()) {
-            T item = list.retrieve();
-            System.out.print(item + " , ");
-            list.findNext();
-
-        }
-        System.out.println(list.retrieve());
-        System.out.println("");
-    }
 }

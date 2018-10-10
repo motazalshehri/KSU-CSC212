@@ -1,5 +1,5 @@
 
-package list;
+package adt;
 
 
 public class Node<T> {

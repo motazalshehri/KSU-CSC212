@@ -1,5 +1,5 @@
 
-package list;
+package adt;
 
 
 public class ArrayList<T> implements List<T> {

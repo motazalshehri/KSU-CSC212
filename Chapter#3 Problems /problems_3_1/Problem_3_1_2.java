@@ -2,13 +2,17 @@
  * Written By NAIF ALSHEHRI
  * https://VisionAcademy.online
  */
-package list;
+package problems_3_1;
+
+import adt.LinkedList;
+import adt.List;
+import helpers.Helper;
 
 /**
  *
  * @author IT676
  */
-public class Problem_3_2 {
+public class Problem_3_1_2 {
 
     public static void main(String[] args) {
         List<String> list1 = new LinkedList<String>();
@@ -20,17 +24,16 @@ public class Problem_3_2 {
         list1.insert("C");
         list1.insert("D");
 
-        printList(list1);
         list2.insert("X");
         list2.insert("Z");
-        printList(list2);
+        Helper.printList(list2);
 
         System.out.println("*************************");
 
         insertAll(list1, list2, 1);
-        printList(list1);
+        Helper.printList(list1);
         System.out.println("*************************");
-        printList(list2);
+        Helper.printList(list2);
     }
 
     public static <T> void insertAll(List<T> l1, List<T> l2, int i) {
@@ -74,20 +77,5 @@ public class Problem_3_2 {
         l1.insert(l2.retrieve());
     }
 
-    /*
-    This method for demonstation only to test the other methods
-     */
-    private static <T> void printList(List<T> list) {
-
-        list.findFirst();
-
-        while (!list.last()) {
-            T item = list.retrieve();
-            System.out.print(item + " , ");
-            list.findNext();
-
-        }
-        System.out.println(list.retrieve());//for the last element
-        System.out.println("");
-    }
+ 
 }

@@ -2,13 +2,15 @@
  * Written By NAIF ALSHEHRI
  * https://VisionAcademy.online
  */
-package list;
+package problems_3_1;
+
+import adt.ArrayList;
 
 /**
  *
  * @author IT676
  */
-public class Problem_3_1 {
+public class Problem_3_1_1 {
 
     public static void main(String[] args) {
 

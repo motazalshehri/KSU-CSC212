@@ -1,6 +1,6 @@
 
 
-package list;
+package adt;
 
 
 
