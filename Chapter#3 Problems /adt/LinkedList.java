@@ -296,4 +296,95 @@ public class LinkedList<T> implements List<T> {
 
     }
 
+    /*
+        Code for problem 3.2.5.b
+   
+     */
+    public void removeIth(int i) {
+
+        /*
+        check if the list is empty 
+         */
+        if (head == null) {
+            return;//cancel the operation
+        }
+
+        /*
+            assuming that  the i is valid 
+            or you can do a while loop to validate it
+         */
+ /*
+         if it's the first element to remove
+         */
+        if (i == 0) {
+
+            current = head = head.next;
+
+            if (head == null) {
+                current = null;
+            }
+
+        } else {
+
+            Node<T> temp;
+            temp = current = head;
+
+            int j = 0;
+            while (j < i) {
+                temp = current;
+                current = current.next;
+                j++;
+            }
+
+            temp.next = current.next;
+            /*
+                If successor of the deleted element
+                exists it is made the new current element otherwise
+                first element is made the new current element.
+             */
+            if (current.next != null) {
+                current = current.next;
+            } else {
+
+                current = head;
+            }
+
+        }
+
+    }
+
+    /*
+        Code for problem 3.2.6
+   
+     */
+    public void removeOddElems() {
+        /*
+        check if the list is empty 
+         */
+        if (head == null) {
+            return;//cancel the operation
+        }
+        /*
+           0    1   2    3    4   5
+           A    B   C    D    E   F
+         */
+
+        current = head;
+        Node<T> temp;
+
+        while (current != null) {
+
+            temp = current.next;
+
+            if (temp != null) {
+
+                current.next = temp.next;
+
+            }
+            current = current.next;
+
+            temp = null;//remove the reference from the removed element : Optional
+        }
+
+    }
 }
